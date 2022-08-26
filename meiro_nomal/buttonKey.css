@@ -1,0 +1,61 @@
+#right {
+  position: relative;
+
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  right: 5px;
+  top: 40px;
+}
+#left {
+  position: relative;
+  border-radius: 6px 0 0 6px;
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  left: 40px;
+  top: 40px;
+  
+}
+#up {
+  position: relative;
+  border-radius: 6px 6px 0 0;
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  left: 34.5px;
+  top: 9.8px;
+  
+}
+#down {
+  position: relative;
+  border-radius: 0 0 6px 6px;
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  right: 68.7px; 
+  top: 69.7px;
+}
+#middle {
+  position: relative;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: 40px;
+}
+#buttonKey {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 600px;
+}
