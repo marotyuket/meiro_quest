@@ -1,7 +1,7 @@
 let showMap = () =>{
   let elem = document.querySelector('div');
   let chip = map[y][x];
-  elem.innerHTML = '<img src="./img/' + images[chip] + '.jpg">';
+  elem.innerHTML = '<img src="./img/' + images[chip] + '.jpg" loading=”lazy”>';
   window.addEventListener('load', function() {
     const modalArea = document.getElementById('modalArea3');
       modalArea.classList.add('is-show3');
@@ -13,10 +13,10 @@ let showMap = () =>{
   } else if(chip === 'D') {
     if(keyflag === true) {
       map[y][x] = 'DD';
-      elem.innerHTML = '<img src="./img/door.jpg">';
+      elem.innerHTML = '<img src="./img/door.jpg" loading=”lazy”>';
       window.setTimeout(function() {
         map[y][x] = 'G';
-        elem.innerHTML = '<img src="./img/goal.jpg">';
+        elem.innerHTML = '<img src="./img/goal.jpg" loading=”lazy”>';
         const modalArea2 = document.getElementById('modalArea2');
         modalArea2.classList.add('is-show2');
         document.getElementById('d').innerHTML = 'おめでとう！ゴールです'
@@ -29,7 +29,7 @@ let showMap = () =>{
         const link = document.getElementById('stylelink');
         link.href = '../sakura.css';
         map[y][x] = 'C';
-        elem.innerHTML = '<img src="./img/congratulations.jpg">';
+        elem.innerHTML = '<img src="./img/congratulations.jpg" loading=”lazy”>';
       }, 2250);
     }
     if(keyflag === false) {
@@ -51,7 +51,7 @@ let showMap = () =>{
     const modalArea2 = document.getElementById('modalArea5');
     modalArea2.classList.add('is-show5');
     map[y][x] = 'W2';
-    elem.innerHTML='<img src="./img/warp2.jpg">';
+    elem.innerHTML='<img src="./img/warp2.jpg" loading=”lazy”>';
   } else if(chip === 'W3') {
     map[y][x] = 'W1';
     const modalArea2 = document.getElementById('modalArea4');
@@ -94,14 +94,14 @@ const modalClose = document.getElementById('modalArea');
 modalClose.classList.remove('is-show');
 let elem = document.querySelector('div');
 map[y][x] = 'K2';
-elem.innerHTML='<img src="./img/key2.jpg">';
+elem.innerHTML='<img src="./img/key2.jpg" loading=”lazy”>';
 const i2 = document.getElementById('i2');
 i2.classList.remove('show');
 const i = document.getElementById('i1');
 i.classList.add('show');
 window.setTimeout(function(){
   map[y][x] = 'K3';
-  elem.innerHTML='<img src="./img/down_key3.jpg">';
+  elem.innerHTML='<img src="./img/down_key3.jpg" loading=”lazy”>';
 }, 1000);
 };
 
@@ -122,7 +122,7 @@ modalClose2 = () => {
       modalClose4.classList.remove('is-show4');
       let elem = document.querySelector('div');
       map[y][x] = 'W4';
-      elem.innerHTML='<img src="./img/up_warp.jpg">';
+      elem.innerHTML='<img src="./img/up_warp.jpg" loading=”lazy”>';
       };
     
       modalClose5 = () => {
@@ -130,6 +130,6 @@ modalClose2 = () => {
         modalClose5.classList.remove('is-show5');
         let elem = document.querySelector('div');
         map[y][x] = 'W3';
-        elem.innerHTML='<img src="./img/down_warp.jpg">';
+        elem.innerHTML='<img src="./img/down_warp.jpg" loading=”lazy”>';
         };
 
