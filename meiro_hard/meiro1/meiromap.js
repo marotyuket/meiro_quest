@@ -16,7 +16,7 @@ let showMap = () =>{
       elem.innerHTML = '<img src="./img/door.jpg" loading=”lazy”>';
       window.setTimeout(function() {
         map[y][x] = 'G';
-        elem.innerHTML = '<img src="./img/goal.jpg">';
+        elem.innerHTML = '<img src="./img/goal.jpg" loading=”lazy”>';
         const modalArea2 = document.getElementById('modalArea2');
         modalArea2.classList.add('is-show2');
         document.getElementById('d').innerHTML = '次の階へ進みます'
