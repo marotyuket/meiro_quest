@@ -1,7 +1,7 @@
 let showMap = () =>{
   let elem = document.querySelector('div');
   let chip = map[y][x];
-  elem.innerHTML = '<img src="./img/' + images[chip] + '.jpg">';
+  elem.innerHTML = '<img src="./img/' + images[chip] + '.jpg" loading=”lazy”>';
   window.addEventListener('load', function() {
     const modalArea = document.getElementById('modalArea3');
       modalArea.classList.add('is-show3');
@@ -13,10 +13,10 @@ let showMap = () =>{
   } else if(chip === 'D') {
     if(keyflag === true) {
       map[y][x] = 'DD';
-      elem.innerHTML = '<img src="./img/door.jpg">';
+      elem.innerHTML = '<img src="./img/door.jpg" loading=”lazy”>';
       window.setTimeout(function() {
         map[y][x] = 'G';
-        elem.innerHTML = '<img src="./img/goal.jpg">';
+        elem.innerHTML = '<img src="./img/goal.jpg" loading=”lazy”>';
         const modalArea2 = document.getElementById('modalArea2');
         modalArea2.classList.add('is-show2');
         document.getElementById('d').innerHTML = '次の階へ進みます'
@@ -79,14 +79,14 @@ const modalClose = document.getElementById('modalArea');
 modalClose.classList.remove('is-show');
 let elem = document.querySelector('div');
 map[y][x] = 'K2';
-elem.innerHTML='<img src="./img/key2.jpg">';
+elem.innerHTML='<img src="./img/key2.jpg" loading=”lazy”>';
 const i2 = document.getElementById('i2');
 i2.classList.remove('show');
 const i = document.getElementById('i1');
 i.classList.add('show');
 window.setTimeout(function(){
   map[y][x] = 'K3';
-  elem.innerHTML='<img src="./img/right_key3.jpg">';
+  elem.innerHTML='<img src="./img/right_key3.jpg" loading=”lazy”>';
 }, 1000);
 };
 
