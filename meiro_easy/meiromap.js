@@ -13,7 +13,7 @@ let showMap = () =>{
   } else if(chip === 'D') {
     if(keyflag === true) {
       map[y][x] = 'DD';
-      elem.innerHTML = '<img src="./img/door.jpg">';
+      elem.innerHTML = '<img src="./img/door.jpg" loading=”lazy”>';
       window.setTimeout(function() {
         map[y][x] = 'G';
         elem.innerHTML = '<img src="./img/goal.jpg">';
@@ -29,7 +29,7 @@ let showMap = () =>{
         const link = document.getElementById('stylelink');
         link.href = 'sakura.css';
         map[y][x] = 'C';
-        elem.innerHTML = '<img src="./img/congratulations.jpg">';
+        elem.innerHTML = '<img src="./img/congratulations.jpg" loading=”lazy”>';
       }, 2250);
     }
     if(keyflag === false) {
@@ -82,14 +82,14 @@ const modalClose = document.getElementById('modalArea');
 modalClose.classList.remove('is-show');
 let elem = document.querySelector('div');
 map[y][x] = 'K2';
-elem.innerHTML='<img src="./img/key2.jpg">';
+elem.innerHTML='<img src="./img/key2.jpg" loading=”lazy”>';
 const i2 = document.getElementById('i2');
 i2.classList.remove('show');
 const i = document.getElementById('i1');
 i.classList.add('show');
 window.setTimeout(function(){
   map[y][x] = 'K3';
-  elem.innerHTML='<img src="./img/right_key3.jpg">';
+  elem.innerHTML='<img src="./img/right_key3.jpg" loading=”lazy”>';
 }, 1000);
 };
 
