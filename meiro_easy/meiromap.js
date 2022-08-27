@@ -1,7 +1,7 @@
 let showMap = () =>{
   let elem = document.querySelector('div');
   let chip = map[y][x];
-  elem.innerHTML = '<img src="./img/' + images[chip] + '.jpg">';
+  elem.innerHTML = '<img src="./img/' + images[chip] + '.jpg" loading=”lazy”>';
   window.addEventListener('load', function() {
     const modalArea = document.getElementById('modalArea3');
       modalArea.classList.add('is-show3');
